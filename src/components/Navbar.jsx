@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,26 +28,37 @@ function Navbar() {
         </button>
 
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
-          <a href="#inicio" onClick={closeMenu}>
-            Inicio
-          </a>
 
-          <a href="#servicios" onClick={closeMenu}>
-            Servicios
-          </a>
+    <a
+    href="#inicio"
+    onClick={closeMenu}
+  >
+    Inicio
+  </a>
 
-          <a href="#contacto" onClick={closeMenu}>
-            Contacto
-          </a>
+  <a
+    href="#servicios"
+    onClick={closeMenu}
+  >
+    Servicios
+  </a>
 
-          <a
-            href="#contacto"
-            className="nav-button"
-            onClick={closeMenu}
-          >
-            Iniciar proyecto
-          </a>
-        </nav>
+  <a
+    href="#contacto"
+    onClick={closeMenu}
+  >
+    Contacto
+  </a>
+
+  <Link
+    to="/login"
+    className="nav-button"
+    onClick={closeMenu}
+  >
+    Iniciar sesión
+  </Link>
+
+</nav>
 
       </div>
     </header>

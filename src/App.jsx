@@ -1,24 +1,51 @@
+import {
+  HashRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
+
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+
+import ProtectedRoute from './routes/ProtectedRoute';
+
+import { AuthProvider } from './context/AuthContext';
+
 import './App.css';
 
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-
 function App() {
-  return(
-    <div className='site'>
-      <Navbar />
+  return (
+    <HashRouter>
 
-      <main>
-        <Hero />
-        <Services />
-        <ContactForm />
-      </main>
+      <AuthProvider>
 
-      <Footer />
-    </div>
+        <Routes>
+
+          <Route
+            path="/"
+            element={<Home />}
+          />
+
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+        </Routes>
+
+      </AuthProvider>
+
+    </HashRouter>
   );
 }
 
