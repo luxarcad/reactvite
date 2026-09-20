@@ -1,16 +1,75 @@
-# React + Vite
+# ReactVite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto web desarrollado con **React + Vite**, enfocado en aprender y practicar el desarrollo moderno de interfaces web mediante componentes reutilizables, estados, eventos y librerías visuales.
 
-Currently, two official plugins are available:
+La aplicación utiliza React como biblioteca principal para construir la interfaz y Vite como herramienta de desarrollo y compilación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- React Bits
+- Motion
+- Git
+- GitHub
+- GitHub Pages
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Objetivo del proyecto
+
+Este proyecto fue creado con fines de aprendizaje y práctica.
+
+Los principales objetivos son:
+
+- Comprender la estructura de un proyecto React.
+- Crear componentes reutilizables.
+- Trabajar con props.
+- Utilizar estados con `useState`.
+- Manejar eventos.
+- Crear formularios controlados.
+- Renderizar información dinámicamente.
+- Integrar componentes externos.
+- Crear interfaces responsivas.
+- Desplegar una aplicación React en GitHub Pages.
+
+---
+
+## Estructura del proyecto
+
+```text
+reactvite/
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Services.jsx
+│   │   ├── ContactForm.jsx
+│   │   ├── Footer.jsx
+│   │   │
+│   │   └── reactbits/
+│   │       ├── GradientText/
+│   │       └── SpotlightCard/
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
